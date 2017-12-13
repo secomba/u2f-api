@@ -31,6 +31,6 @@ export interface API {
 	sign: (signRequests: SignRequest | ReadonlyArray<SignRequest>, timeout?: number) => CancellablePromise<SignResponse>;
 	ErrorCodes: ErrorCodesEnum;
 }
-export declare type ExporterType = ((promiseImplementation: PromiseConstructorLike) => API) & API;
+export declare type ExporterType = ((promiseImplementation: PromiseConstructorLike, allowHttp: boolean) => API) & API;
 declare const _default: ExporterType;
 export default _default;
